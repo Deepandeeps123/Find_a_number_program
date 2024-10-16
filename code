@@ -1,0 +1,254 @@
+print('='*40)
+print('1.Number reverse\n'
+      '2.Number Palindrome\n'
+      '3.Fibanacci Series\n'
+      '4.Factorial Number\n'
+      '5.Perfect Number\n'
+      '6.Perfect square\n'
+      '7.Strong Number\n'
+      '8.Amstrong Number\n'
+      '9.Sum of the Series\n'
+      '10.Harshad Number\n'
+      '11.Xylem and pholem Number\n'
+      '12.Prime Number\n'
+      '13.Happy Number')
+print('='*40)
+n=int(input('Choose The given option only 1 to 13 :'))
+if n<=13 and n>0:
+    if n==1:
+        a=int(input('Enter the number:'))
+        sum=0
+        j=0
+        while j<a:
+            rem=a%10
+            sum=sum*10+rem
+            a=a//10
+        print('-' * 40)
+        print('Reverse Number')
+        print('-' * 40)
+        print(f'Output--{sum}')
+    if n==2:
+        a1=int(input('Enter the number:'))
+        b1=a1
+        sum1=0
+        i1=0
+        while i1<a1:
+            rem=a1%10
+            sum1=sum1*10+rem
+            a1=a1//10
+        if b1==sum1:
+            print('-' * 40)
+            print('_' * 40)
+            print('Palindrome or Not Palindrome Number')
+            print('_' * 40)
+            print(f'User input--{b1}')
+            print(f'output--{sum1}')
+            print('It is Palindrome')
+            print('-' * 40)
+        else:
+            print('-' * 40)
+            print('_' * 40)
+            print('Palindrome or Not Palindrome Number')
+            print('_' * 40)
+            print(f'User input--{b1}')
+            print(f'output--{sum1}')
+            print('Not a Palindrome')
+            print('-' * 40)
+    if n==3:
+        # a2=int(input('Enter the series'))
+        print('-' * 40)
+        print('Fibanacci Series Number')
+        print('-' * 40)
+        a22=int(input('Enter the First series number:'))
+        a222=int(input('Enter the Second series number:'))
+        a2=int(input('Enter the Count value:'))
+        print(a22,a222,end=' ')
+        i2=0
+        while i2<=(a2-3):
+            c2=a22+a222
+
+
+            print(c2,end=' ')
+            i2+=1
+            a22=a222
+            a222=c2
+    if n==4:
+        a3=int(input('Enter The number:'))
+        b3=a3
+        sum3=1                    # 5
+        num3=1
+        i=0
+        while i<a3:
+            sum3=sum3*num3*a3        #  0=1*5==5     -->
+            a3-=1
+        print('-' * 40)
+        print(f'The factorial Number of {b3} is {sum3}')
+        print('-' * 40)
+    if n==5:
+        a4=int(input('Enter the Number:'))
+        b4=a4                     #6
+        sum4=0
+        i4=1
+        while i4<a4:
+            if a4%i4==0:
+                sum4=sum4+i4
+            i4+=1
+        if b4==sum4:
+            print('-' * 40)
+            print('It is Perfect Number')
+            print('-' * 40)
+        else:
+            print('-' * 40)
+            print('Not a Perfect Number')
+            print('-' * 40)
+    if n==6:
+        a6=int(input('Enter The Number:'))
+        b6=a6
+        c6=a6**0.5
+        d6=int(c6)
+        e6=d6*d6
+        if b6==e6:
+            print('-' * 40)
+            print(f'{b6} is a Perfect Square')
+            print('-' * 40)
+        else:
+            print('-' * 40)
+            print(f'{b6} is a Not Perfect Square')
+            print('-' * 40)
+    if n==7:
+        a7=int(input('Enter The Number:'))           #145----->1     24     120
+        b7=a7
+        sum7=0
+        i7=0
+        while i7<a7:
+            rem=a7%10
+            fact7=1
+            while rem>0:
+                fact7=fact7*rem
+                rem-=1
+            sum7=sum7+fact7
+            a7=a7//10
+        if b7==sum7:
+            print('-' * 40)
+            print(f'{b7} is a Strong Number')
+            print('-' * 40)
+        else:
+            print('-' * 40)
+            print(f'{b7} is not a Strong Number')
+            print('-' * 40)
+    if n==8:
+        a8=int(input('Enter The Number:'))      #153---1   125   27
+        b8=a8
+        c8=str(b8)
+        d8=len(c8)
+        sum8=0
+        i8=0
+        while i8<a8:
+            rem=a8%10
+            fact8=1
+            fact8=rem**d8
+            sum8=sum8+fact8
+            a8=a8//10
+        if b8==sum8:
+            print('-' * 40)
+            print(f'{b8} is a Amstrong Number')
+            print('-' * 40)
+        else:
+            print('-' * 40)
+            print(f'{b8} is not a Amstrong Number')
+            print('-' * 40)
+    if n==9:
+        a9=int(input('Enter the number:'))        #123456789    ----45
+        sum9=0
+        b9=a9
+        i9=0
+        while i9<a9:
+            rem9=a9%10
+            sum9=sum9+rem9
+            a9=a9//10
+        print('-' * 40)
+        print(f'The given of number of {b9} sum is {sum9}')
+        print('-' * 40)
+    if n==10:
+        a10=int(input('Enter the number:'))       #124----- 1   2   4  ---->7     124%7==0
+        b10=a10
+        sum10=0
+        i10=0
+        while a10>i10:
+            rem10=a10%10
+            sum10=sum10+rem10
+            a10=a10//10
+        if b10 % sum10==0:
+            print('-' * 40)
+            print(f'{b10} is a Harshad Number')
+            print('-' * 40)
+        else:
+            print('-' * 40)
+            print(f'{b10} is not a Harshad Number')
+            print('-' * 40)
+    if n==11:
+        a11=int(input('Enter the number:'))     #1234--- 1  4  ---> 5    2   3 --->   5
+        o_sum=0
+        i_sum=0
+        b11=a11
+        i11=0
+        while a11>i11:
+            rem=a11%10
+            if a11==b11 or a11<9:
+                o_sum=o_sum+rem
+            else:
+                i_sum=i_sum+rem
+            a11=a11//10
+        if o_sum==i_sum:
+            print('-' * 40)
+            print(f'{b11} is a Xylem Number')
+            print(f'{o_sum} == {i_sum}')
+            print('-' * 40)
+        else:
+            print('-' * 40)
+            print(f'{b11} is a Pholem Number')
+            print(f'{o_sum} == {i_sum}')
+            print('-' * 40)
+    if n==12:
+        a12=int(input('Enter The Number:'))       #7
+        i12=2
+        res=True
+        while a12>i12:
+            if a12%i12==0:
+                res=False
+                break
+            i12+=1
+        if res==True:
+            print('-' * 40)
+            print(f'{a12} is a Prime Number')
+            print('-' * 40)
+        else:
+            print('-' * 40)
+            print(f'{a12} is not a Prime Number')
+            print('-' * 40)
+    if n==13:
+        a13=int(input('Enter the number:'))      #rem==1 (output==1)    ---->  13-->  1**2   3**2 -----> 1 + 9 -----> 10    =====> 1 **2   0**2---> 1
+        i13=0
+        b13=a13
+        while a13>9:
+            sum13=0
+            while a13>0:
+                rem=a13%10
+                sum13=rem**2
+                a13=a13//10
+            fact13=sum13
+        if sum13==1:
+            print('-' * 40)
+            print(f'{b13} is a Happy Number')
+            print(f'{sum13} == 1')
+            print('-' * 40)
+        else:
+            print('-' * 40)
+            print(f'{b13} is Not a Happy Number')
+            print(f'{sum13} == 1')
+            print('-' * 40)
+
+
+
+else:
+    print('Invalid Number only 1 to 13 ')
